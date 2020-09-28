@@ -31,7 +31,12 @@ get '/monstas/:name' do
     ##  template = "<h1>Hello <%= name %></h1>"
     ##  layout   = "<html><body><%= yield %></body></html>"
     ##  erb template, { :locals => params, :layout => layout }
-    erb :monstas, { :locals => params, :layout => :layout }
+    # erb :monstas, { :locals => params, :layout => :layout }
+    # erb :monstas, { :locals => params, :layout => true }
+    # erb :monstas, { :locals => params }
+    # (The above lines were all written before name was replaced with @name in monstas.erb)
+    @name = params["name"]
+    erb :monstas
 
     # documentation on erb here: http://webapps-for-beginners.rubymonstas.org/sinatra/templates.html
 end
