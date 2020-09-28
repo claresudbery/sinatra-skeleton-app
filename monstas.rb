@@ -40,3 +40,8 @@ get '/monstas/:name' do
 
     # documentation on erb here: http://webapps-for-beginners.rubymonstas.org/sinatra/templates.html
 end
+
+get "/monstas_form" do
+    p params
+    erb :monstas_form
+end
