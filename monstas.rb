@@ -27,9 +27,11 @@ get '/monstas/:name' do
     # ERB.new("<h1>Hello <%= params[:name] %></h1>").result(binding)
     # erb "<h1>Hello <%= name %></h1>", { :locals => { :name => params[:name] } }
     # erb "<h1>Hello <%= name %></h1>", { :locals => params }
-    template = "<h1>Hello <%= name %></h1>"
-    layout   = "<html><body><%= yield %></body></html>"
-    erb template, { :locals => params, :layout => layout }
+    # The following three lines are equivalent to each individual line
+    ##  template = "<h1>Hello <%= name %></h1>"
+    ##  layout   = "<html><body><%= yield %></body></html>"
+    ##  erb template, { :locals => params, :layout => layout }
+    erb :monstas, { :locals => params, :layout => :layout }
 
     # documentation on erb here: http://webapps-for-beginners.rubymonstas.org/sinatra/templates.html
 end
