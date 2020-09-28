@@ -19,7 +19,7 @@ def read_names
 end
 
 get "/monstas" do
-    @message = session[:message]
+    @message = session.delete(:message)
     @name = params["name"]
     @names = read_names
     erb :monstas
