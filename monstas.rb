@@ -22,7 +22,7 @@ get "/param-demo-2/:name" do
     # As well as any query params that can be part of the URL (separated with a question mark ?).
 end
 
-get '/monstas/:name' do
+get '/monstas_old/:name' do
     # Each of the following lines is equivalent to the code below: 
     # ERB.new("<h1>Hello <%= params[:name] %></h1>").result(binding)
     # erb "<h1>Hello <%= name %></h1>", { :locals => { :name => params[:name] } }
@@ -41,7 +41,7 @@ get '/monstas/:name' do
     # documentation on erb here: http://webapps-for-beginners.rubymonstas.org/sinatra/templates.html
 end
 
-get "/monstas_form" do
+get "/monstas" do
     @name = params["name"]
-    erb :monstas_form
+    erb :monstas
 end
