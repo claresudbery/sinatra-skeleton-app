@@ -19,11 +19,11 @@ end
 get "/monstas" do
     @name = params["name"]
     @names = read_names
-    store_name("names.txt", @name)
     erb :monstas
 end
 
-# post "/monstas" do
-#     @name = params["name"]
-#     store_name("names.txt", @name)
-# end
+post "/monstas" do
+    @name = params["name"]
+    store_name("names.txt", @name)
+    "Ok!"
+end
