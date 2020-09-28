@@ -28,4 +28,9 @@ RSpec.describe 'The HelloWorld App' do
       get '/monstas'
       expect(last_response.body).to include('submit')
     end
+  
+    it "has a list item" do
+      get '/monstas'
+      expect(last_response.body).to have_tag(:li)
+    end
 end
