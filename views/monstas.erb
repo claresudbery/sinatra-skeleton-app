@@ -6,3 +6,9 @@
   <input type="text" name="name" value="<%= @name %>">
   <input type="submit">
 </form>
+
+<ul>
+  <% @names.each do |name| %>
+    <li><%= name %></li>
+  <% end %>
+<ul>
