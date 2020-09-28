@@ -36,7 +36,7 @@ get '/monstas_old/:name' do
     # erb :monstas, { :locals => params }
     # (The above lines were all written before name was replaced with @name in monstas.erb)
     @name = params["name"]
-    erb :monstas
+    erb :monstas_old
 
     # documentation on erb here: http://webapps-for-beginners.rubymonstas.org/sinatra/templates.html
 end
