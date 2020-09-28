@@ -25,5 +25,5 @@ end
 post "/monstas" do
     @name = params["name"]
     store_name("names.txt", @name)
-    "Ok!"
+    redirect "/monstas?name=#{@name}"
 end
