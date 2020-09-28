@@ -42,6 +42,6 @@ get '/monstas/:name' do
 end
 
 get "/monstas_form" do
-    p params
+    @name = params["name"]
     erb :monstas_form
 end
