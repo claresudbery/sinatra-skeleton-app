@@ -10,7 +10,7 @@ RSpec.describe 'The HelloWorld App' do
     include Rack::Test::Methods
   
     def app
-      Sinatra::Application
+      MyApp
     end
   
     it "says hello" do
