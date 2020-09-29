@@ -3,7 +3,8 @@ require "erb"
 
 # This page created as part of this tutorial: http://webapps-for-beginners.rubymonstas.org/sinatra/params.html
 
-# To spin up this Sinatra server just run this in browser: ruby monstas.rb
+# To start the app / spin up the server, run the following on the command line: rackup -p 4567
+# Alternatively you can still just use: ruby monstas.rb
 
 class MyApp < Sinatra::Base
     enable :sessions
