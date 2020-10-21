@@ -46,10 +46,12 @@ class MyApp < Sinatra::Base
         end
     end
 
+    # Visit http://127.0.0.1:4567 in the browser
     get '/' do
         "Hello World #{params[:name]}".strip
     end
 
+    # Visit http://127.0.0.1:4567/monstas in the browser 
     get "/monstas" do
         @message = session.delete(:message)
         @name = params["name"]
@@ -57,6 +59,7 @@ class MyApp < Sinatra::Base
         erb :monstas
     end
 
+    # Visit http://127.0.0.1:4567/monstas in the browser and enter a name
     post "/monstas" do
         @name = params["name"]
         @names = read_names
